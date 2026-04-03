@@ -1,12 +1,12 @@
-import * as React from "react"
+import { mergeProps } from "@base-ui/react/merge-props"
+import { useRender } from "@base-ui/react/use-render"
 import { cva, type VariantProps } from "class-variance-authority"
-import { Slot } from "radix-ui"
 
 import { cn } from "@/lib/utils"
 
 // Figma 기준 Badge 스펙
-export const badgeVariants = cva(
-  "inline-flex items-center justify-center w-fit whitespace-nowrap shrink-0 transition-colors",
+const badgeVariants = cva(
+  "group/badge inline-flex w-fit shrink-0 items-center justify-center overflow-hidden whitespace-nowrap transition-all [&>svg]:pointer-events-none [&>svg]:size-3!",
   {
     variants: {
       variant: {
@@ -56,37 +56,40 @@ function Badge({
   variant = "default",
   size = "default",
   type = "badge",
-  asChild = false,
+  render,
+  children,
   ...props
-}: React.ComponentProps<"span"> &
-  VariantProps<typeof badgeVariants> & {
-    asChild?: boolean
-  }) {
-  const Comp = asChild ? Slot.Root : "span"
-
-  return (
-    <Comp
-      data-slot="badge"
-      data-variant={variant}
-      data-size={size}
-      data-type={type}
-      className={cn(badgeVariants({ variant, size, type }), className)}
-      {...props}
-    >
-      {type === "dot" && (
-        <span
-          className={cn(
-            "inline-block size-1.5 rounded-full shrink-0",
-            variant === "error"    && "bg-status-destructive",
-            variant === "positive" && "bg-status-positive",
-            variant === "warning"  && "bg-status-cautionary",
-            variant === "neutral"  && "bg-neutral-550",
-          )}
-        />
-      )}
-      {props.children}
-    </Comp>
-  )
+}: useRender.ComponentProps<"span"> & VariantProps<typeof badgeVariants>) {
+  return useRender({
+    defaultTagName: "span",
+    props: mergeProps<"span">(
+      {
+        className: cn(badgeVariants({ variant, size, type }), className),
+        children: (
+          <>
+            {type === "dot" && (
+              <span
+                className={cn(
+                  "inline-block size-1.5 rounded-full shrink-0",
+                  variant === "error"    && "bg-status-destructive",
+                  variant === "positive" && "bg-status-positive",
+                  variant === "warning"  && "bg-status-cautionary",
+                  variant === "neutral"  && "bg-neutral-550",
+                )}
+              />
+            )}
+            {children}
+          </>
+        ),
+      },
+      props
+    ),
+    render,
+    state: {
+      slot: "badge",
+      variant,
+    },
+  })
 }
 
-export { Badge }
+export { Badge, badgeVariants }

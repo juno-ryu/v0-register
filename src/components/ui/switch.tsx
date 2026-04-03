@@ -1,50 +1,29 @@
-import * as React from "react"
-import { Switch as SwitchPrimitive } from "radix-ui"
+"use client"
+
+import { Switch as SwitchPrimitive } from "@base-ui/react/switch"
 
 import { cn } from "@/lib/utils"
 
 function Switch({
   className,
-  thumbClassName,
+  size = "default",
   ...props
-}: React.ComponentProps<typeof SwitchPrimitive.Root> & {
-  thumbClassName?: string
+}: SwitchPrimitive.Root.Props & {
+  size?: "sm" | "default"
 }) {
   return (
     <SwitchPrimitive.Root
       data-slot="switch"
+      data-size={size}
       className={cn(
-        // 트랙: 32×10px
-        "group relative inline-flex h-[10px] w-[32px] shrink-0 items-center rounded-full outline-none transition-colors cursor-pointer",
-        // ON / OFF 트랙 기본 색상 — className으로 override 가능
-        // 예) className="data-[state=checked]:bg-key-pink data-[state=unchecked]:bg-neutral-400"
-        "data-[state=checked]:bg-key-blue data-[state=unchecked]:bg-neutral-400",
-        // disabled 트랙
-        "disabled:cursor-not-allowed disabled:data-[state=checked]:bg-key-blue/10 disabled:data-[state=unchecked]:bg-border",
-        // focus
-        "focus-visible:ring-2 focus-visible:ring-key-blue/30",
+        "peer group/switch relative inline-flex shrink-0 items-center rounded-full border border-transparent transition-all outline-none after:absolute after:-inset-x-3 after:-inset-y-2 focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50 aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 data-[size=default]:h-[18.4px] data-[size=default]:w-[32px] data-[size=sm]:h-[14px] data-[size=sm]:w-[24px] dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 data-checked:bg-primary data-unchecked:bg-input dark:data-unchecked:bg-input/80 data-disabled:cursor-not-allowed data-disabled:opacity-50",
         className
       )}
       {...props}
     >
       <SwitchPrimitive.Thumb
         data-slot="switch-thumb"
-        className={cn(
-          "pointer-events-none block size-[14px] rounded-full bg-background transition-[left]",
-          // shadow-soft
-          "shadow-[0px_1px_2px_0px_rgba(0,0,0,0.15)]",
-          // stroke: 트랙 색과 동일 — thumbClassName으로 override 가능
-          // 예) thumbClassName="data-[state=checked]:ring-key-pink"
-          "ring-1 data-[state=checked]:ring-key-blue data-[state=unchecked]:ring-neutral-400",
-          // disabled stroke
-          "group-disabled:data-[state=checked]:ring-key-blue/10 group-disabled:data-[state=unchecked]:ring-border",
-          // disabled thumb fill
-          "group-disabled:bg-muted",
-          // 위치
-          "absolute top-1/2 -translate-y-1/2",
-          "data-[state=unchecked]:left-[-2px] data-[state=checked]:left-[20px]",
-          thumbClassName
-        )}
+        className="pointer-events-none block rounded-full bg-background ring-0 transition-transform group-data-[size=default]/switch:size-4 group-data-[size=sm]/switch:size-3 group-data-[size=default]/switch:data-checked:translate-x-[calc(100%-2px)] group-data-[size=sm]/switch:data-checked:translate-x-[calc(100%-2px)] dark:data-checked:bg-primary-foreground group-data-[size=default]/switch:data-unchecked:translate-x-0 group-data-[size=sm]/switch:data-unchecked:translate-x-0 dark:data-unchecked:bg-foreground"
       />
     </SwitchPrimitive.Root>
   )

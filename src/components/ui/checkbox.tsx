@@ -1,53 +1,28 @@
-import * as React from "react"
-import { CheckIcon, MinusIcon } from "lucide-react"
-import { Checkbox as CheckboxPrimitive } from "radix-ui"
+"use client"
+
+import { Checkbox as CheckboxPrimitive } from "@base-ui/react/checkbox"
 
 import { cn } from "@/lib/utils"
+import { CheckIcon } from "lucide-react"
 
-function Checkbox({
-  className,
-  wrapperClassName,
-  size = "default",
-  ...props
-}: React.ComponentProps<typeof CheckboxPrimitive.Root> & {
-  wrapperClassName?: string
-  size?: "sm" | "default"
-}) {
+function Checkbox({ className, ...props }: CheckboxPrimitive.Root.Props) {
   return (
-    <div
-      className={cn("shrink-0 inline-flex", wrapperClassName)}
-      style={{ padding: size === "sm" ? "2.5px" : "3px" }}
+    <CheckboxPrimitive.Root
+      data-slot="checkbox"
+      className={cn(
+        "peer relative flex size-4 shrink-0 items-center justify-center rounded-[4px] border border-input transition-colors outline-none group-has-disabled/field:opacity-50 after:absolute after:-inset-x-3 after:-inset-y-2 focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50 disabled:cursor-not-allowed disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 aria-invalid:aria-checked:border-primary dark:bg-input/30 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 data-checked:border-primary data-checked:bg-primary data-checked:text-primary-foreground dark:data-checked:bg-primary",
+        className
+      )}
+      {...props}
     >
-      <CheckboxPrimitive.Root
-        data-slot="checkbox"
-        className={cn(
-          // Figma: border-width=2px (SVG path 아웃라인 방식)
-          "peer shrink-0 border-2 border-neutral-600 bg-transparent outline-none transition-shadow cursor-pointer",
-          // Figma: default=18px/radius-3px, sm=15px/radius-2px
-          size === "default" && "size-[18px] rounded-[3px]",
-          size === "sm"      && "size-[15px] rounded-[2px]",
-          // checked/indeterminate 기본 색상 — className으로 override 가능
-          "data-[state=checked]:bg-key-blue data-[state=checked]:border-key-blue data-[state=checked]:text-white",
-          "data-[state=indeterminate]:bg-neutral-400 data-[state=indeterminate]:border-neutral-400 data-[state=indeterminate]:text-white",
-          // focus
-          "focus-visible:border-key-blue focus-visible:ring-2 focus-visible:ring-key-blue/20",
-          // disabled
-          "disabled:cursor-not-allowed disabled:border-border disabled:bg-muted disabled:data-[state=checked]:bg-border disabled:data-[state=checked]:border-border",
-          className
-        )}
-        {...props}
+      <CheckboxPrimitive.Indicator
+        data-slot="checkbox-indicator"
+        className="grid place-content-center text-current transition-none [&>svg]:size-3.5"
       >
-        <CheckboxPrimitive.Indicator
-          data-slot="checkbox-indicator"
-          className="grid place-content-center text-current transition-none"
-        >
-          {props.checked === "indeterminate"
-            ? <MinusIcon className={size === "sm" ? "size-2.5 text-white" : "size-3 text-white"} strokeWidth={3} />
-            : <CheckIcon className={size === "sm" ? "size-2.5 text-white" : "size-3 text-white"} strokeWidth={3} />
-          }
-        </CheckboxPrimitive.Indicator>
-      </CheckboxPrimitive.Root>
-    </div>
+        <CheckIcon
+        />
+      </CheckboxPrimitive.Indicator>
+    </CheckboxPrimitive.Root>
   )
 }
 

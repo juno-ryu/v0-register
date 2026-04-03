@@ -4,7 +4,7 @@
   "title": "ARABIZ Theme",
   "description": "ARABIZ 백오피스 디자인 시스템 — neutral 14단계, semantic 토큰, Pretendard 폰트",
   "dependencies": [
-    "radix-ui"
+    "@base-ui/react"
   ],
   "files": [
     {

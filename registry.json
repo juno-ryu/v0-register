@@ -78,7 +78,7 @@
           "radius": "0.5rem"
         }
       },
-      "dependencies": ["radix-ui"],
+      "dependencies": ["@base-ui/react"],
       "files": [
         {
           "path": "src/index.css",
@@ -97,7 +97,7 @@
       "type": "registry:ui",
       "title": "Button",
       "description": "Figma 스펙 기반 버튼 — 6 variant, 11 size",
-      "dependencies": ["class-variance-authority", "radix-ui"],
+      "dependencies": ["class-variance-authority", "@base-ui/react"],
       "registryDependencies": ["https://juno-ryu.github.io/v0-register/theme.json"],
       "files": [
         {
@@ -153,7 +153,7 @@
       "name": "dialog",
       "type": "registry:ui",
       "title": "Dialog",
-      "dependencies": ["radix-ui"],
+      "dependencies": ["@base-ui/react"],
       "registryDependencies": ["https://juno-ryu.github.io/v0-register/theme.json"],
       "files": [
         {
@@ -167,7 +167,7 @@
       "name": "select",
       "type": "registry:ui",
       "title": "Select",
-      "dependencies": ["radix-ui"],
+      "dependencies": ["@base-ui/react"],
       "registryDependencies": ["https://juno-ryu.github.io/v0-register/theme.json"],
       "files": [
         {
@@ -195,7 +195,7 @@
       "type": "registry:ui",
       "title": "Tabs",
       "description": "default/line/segment 3가지 variant",
-      "dependencies": ["radix-ui", "class-variance-authority"],
+      "dependencies": ["@base-ui/react", "class-variance-authority"],
       "registryDependencies": ["https://juno-ryu.github.io/v0-register/theme.json"],
       "files": [
         {
@@ -209,7 +209,7 @@
       "name": "checkbox",
       "type": "registry:ui",
       "title": "Checkbox",
-      "dependencies": ["radix-ui"],
+      "dependencies": ["@base-ui/react"],
       "registryDependencies": ["https://juno-ryu.github.io/v0-register/theme.json"],
       "files": [
         {
@@ -223,7 +223,7 @@
       "name": "switch",
       "type": "registry:ui",
       "title": "Switch",
-      "dependencies": ["radix-ui"],
+      "dependencies": ["@base-ui/react"],
       "registryDependencies": ["https://juno-ryu.github.io/v0-register/theme.json"],
       "files": [
         {
@@ -237,7 +237,7 @@
       "name": "radio-group",
       "type": "registry:ui",
       "title": "Radio Group",
-      "dependencies": ["radix-ui"],
+      "dependencies": ["@base-ui/react"],
       "registryDependencies": ["https://juno-ryu.github.io/v0-register/theme.json"],
       "files": [
         {
@@ -264,7 +264,7 @@
       "name": "label",
       "type": "registry:ui",
       "title": "Label",
-      "dependencies": ["radix-ui"],
+      "dependencies": ["@base-ui/react"],
       "registryDependencies": ["https://juno-ryu.github.io/v0-register/theme.json"],
       "files": [
         {
@@ -278,7 +278,7 @@
       "name": "form",
       "type": "registry:ui",
       "title": "Form",
-      "dependencies": ["radix-ui", "react-hook-form", "@hookform/resolvers"],
+      "dependencies": ["@base-ui/react", "react-hook-form", "@hookform/resolvers"],
       "registryDependencies": ["https://juno-ryu.github.io/v0-register/theme.json", "https://juno-ryu.github.io/v0-register/label.json"],
       "files": [
         {
@@ -292,7 +292,7 @@
       "name": "sheet",
       "type": "registry:ui",
       "title": "Sheet",
-      "dependencies": ["radix-ui"],
+      "dependencies": ["@base-ui/react"],
       "registryDependencies": ["https://juno-ryu.github.io/v0-register/theme.json"],
       "files": [
         {
@@ -306,7 +306,7 @@
       "name": "popover",
       "type": "registry:ui",
       "title": "Popover",
-      "dependencies": ["radix-ui"],
+      "dependencies": ["@base-ui/react"],
       "registryDependencies": ["https://juno-ryu.github.io/v0-register/theme.json"],
       "files": [
         {
@@ -348,7 +348,7 @@
       "name": "separator",
       "type": "registry:ui",
       "title": "Separator",
-      "dependencies": ["radix-ui"],
+      "dependencies": ["@base-ui/react"],
       "registryDependencies": ["https://juno-ryu.github.io/v0-register/theme.json"],
       "files": [
         {
@@ -389,7 +389,7 @@
       "name": "alert-dialog",
       "type": "registry:ui",
       "title": "Alert Dialog",
-      "dependencies": ["radix-ui"],
+      "dependencies": ["@base-ui/react"],
       "registryDependencies": ["https://juno-ryu.github.io/v0-register/theme.json", "https://juno-ryu.github.io/v0-register/button.json"],
       "files": [
         {
