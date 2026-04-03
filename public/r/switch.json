@@ -1,0 +1,20 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "switch",
+  "title": "Switch",
+  "dependencies": [
+    "radix-ui"
+  ],
+  "registryDependencies": [
+    "theme"
+  ],
+  "files": [
+    {
+      "path": "src/components/ui/switch.tsx",
+      "content": "import * as React from \"react\"\nimport { Switch as SwitchPrimitive } from \"radix-ui\"\n\nimport { cn } from \"@/lib/utils\"\n\nfunction Switch({\n  className,\n  thumbClassName,\n  ...props\n}: React.ComponentProps<typeof SwitchPrimitive.Root> & {\n  thumbClassName?: string\n}) {\n  return (\n    <SwitchPrimitive.Root\n      data-slot=\"switch\"\n      className={cn(\n        // 트랙: 32×10px\n        \"group relative inline-flex h-[10px] w-[32px] shrink-0 items-center rounded-full outline-none transition-colors cursor-pointer\",\n        // ON / OFF 트랙 기본 색상 — className으로 override 가능\n        // 예) className=\"data-[state=checked]:bg-key-pink data-[state=unchecked]:bg-neutral-400\"\n        \"data-[state=checked]:bg-key-blue data-[state=unchecked]:bg-neutral-400\",\n        // disabled 트랙\n        \"disabled:cursor-not-allowed disabled:data-[state=checked]:bg-key-blue/10 disabled:data-[state=unchecked]:bg-border\",\n        // focus\n        \"focus-visible:ring-2 focus-visible:ring-key-blue/30\",\n        className\n      )}\n      {...props}\n    >\n      <SwitchPrimitive.Thumb\n        data-slot=\"switch-thumb\"\n        className={cn(\n          \"pointer-events-none block size-[14px] rounded-full bg-background transition-[left]\",\n          // shadow-soft\n          \"shadow-[0px_1px_2px_0px_rgba(0,0,0,0.15)]\",\n          // stroke: 트랙 색과 동일 — thumbClassName으로 override 가능\n          // 예) thumbClassName=\"data-[state=checked]:ring-key-pink\"\n          \"ring-1 data-[state=checked]:ring-key-blue data-[state=unchecked]:ring-neutral-400\",\n          // disabled stroke\n          \"group-disabled:data-[state=checked]:ring-key-blue/10 group-disabled:data-[state=unchecked]:ring-border\",\n          // disabled thumb fill\n          \"group-disabled:bg-muted\",\n          // 위치\n          \"absolute top-1/2 -translate-y-1/2\",\n          \"data-[state=unchecked]:left-[-2px] data-[state=checked]:left-[20px]\",\n          thumbClassName\n        )}\n      />\n    </SwitchPrimitive.Root>\n  )\n}\n\nexport { Switch }\n",
+      "type": "registry:ui",
+      "target": "src/components/ui/switch.tsx"
+    }
+  ],
+  "type": "registry:ui"
+}
