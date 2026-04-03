@@ -104,11 +104,6 @@
           "path": "src/components/ui/button.tsx",
           "type": "registry:ui",
           "target": "src/components/ui/button.tsx"
-        },
-        {
-          "path": "src/components/ui/variants/button.ts",
-          "type": "registry:ui",
-          "target": "src/components/ui/variants/button.ts"
         }
       ]
     },
@@ -138,11 +133,6 @@
           "path": "src/components/ui/badge.tsx",
           "type": "registry:ui",
           "target": "src/components/ui/badge.tsx"
-        },
-        {
-          "path": "src/components/ui/variants/badge.ts",
-          "type": "registry:ui",
-          "target": "src/components/ui/variants/badge.ts"
         }
       ]
     },
@@ -212,11 +202,6 @@
           "path": "src/components/ui/tabs.tsx",
           "type": "registry:ui",
           "target": "src/components/ui/tabs.tsx"
-        },
-        {
-          "path": "src/components/ui/variants/tabs.ts",
-          "type": "registry:ui",
-          "target": "src/components/ui/variants/tabs.ts"
         }
       ]
     },
