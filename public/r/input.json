@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "input",
+  "title": "Input",
+  "dependencies": [],
+  "registryDependencies": [
+    "theme"
+  ],
+  "files": [
+    {
+      "path": "src/components/ui/input.tsx",
+      "content": "import * as React from \"react\"\n\nimport { cn } from \"@/lib/utils\"\n\nfunction Input({ className, type, ...props }: React.ComponentProps<\"input\">) {\n  return (\n    <input\n      type={type}\n      data-slot=\"input\"\n      className={cn(\n        // Figma: h-40px, border-border, bg-background, px-4(16px), typo-body3/weight-400\n        \"h-10 w-full min-w-0 border border-border bg-background px-4 typo-body3 text-foreground outline-none transition-[color,box-shadow]\",\n        \"placeholder:text-muted-foreground\",\n        \"focus-visible:border-key-blue focus-visible:ring-2 focus-visible:ring-key-blue/20\",\n        \"disabled:bg-muted disabled:text-neutral-400 disabled:cursor-not-allowed\",\n        \"aria-invalid:border-status-destructive aria-invalid:focus-visible:border-status-destructive aria-invalid:focus-visible:ring-status-destructive/20\",\n        className\n      )}\n      {...props}\n    />\n  )\n}\n\nexport { Input }\n",
+      "type": "registry:ui",
+      "target": "src/components/ui/input.tsx"
+    }
+  ],
+  "type": "registry:ui"
+}

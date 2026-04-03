@@ -1,0 +1,17 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "textarea",
+  "title": "Textarea",
+  "registryDependencies": [
+    "theme"
+  ],
+  "files": [
+    {
+      "path": "src/components/ui/textarea.tsx",
+      "content": "import * as React from \"react\"\n\nimport { cn } from \"@/lib/utils\"\n\nfunction Textarea({ className, ...props }: React.ComponentProps<\"textarea\">) {\n  return (\n    <textarea\n      data-slot=\"textarea\"\n      className={cn(\n        // Figma: border-border, bg-background, px-4(16px), py-2(8px), typo-body3/weight-400\n        \"w-full min-h-[88px] border border-border bg-background px-4 py-2 typo-body3 text-foreground outline-none transition-[color,box-shadow] resize-none\",\n        \"placeholder:text-muted-foreground\",\n        \"focus-visible:border-key-blue focus-visible:ring-2 focus-visible:ring-key-blue/20\",\n        \"disabled:bg-muted disabled:text-neutral-400 disabled:cursor-not-allowed\",\n        \"aria-invalid:border-status-destructive aria-invalid:focus-visible:border-status-destructive aria-invalid:focus-visible:ring-status-destructive/20\",\n        className\n      )}\n      {...props}\n    />\n  )\n}\n\nexport { Textarea }\n",
+      "type": "registry:ui",
+      "target": "src/components/ui/textarea.tsx"
+    }
+  ],
+  "type": "registry:ui"
+}

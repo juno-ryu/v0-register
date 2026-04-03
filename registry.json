@@ -1,0 +1,418 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry.json",
+  "name": "arabiz-design-system",
+  "homepage": "https://v0-register.vercel.app",
+  "items": [
+    {
+      "name": "theme",
+      "type": "registry:theme",
+      "title": "ARABIZ Theme",
+      "description": "ARABIZ 백오피스 디자인 시스템 — neutral 14단계, semantic 토큰, Pretendard 폰트",
+      "cssVars": {
+        "light": {
+          "background": "#ffffff",
+          "foreground": "#0f0f0f",
+          "card": "#ffffff",
+          "card-foreground": "#0f0f0f",
+          "popover": "#ffffff",
+          "popover-foreground": "#0f0f0f",
+          "primary": "#000000",
+          "primary-foreground": "#ffffff",
+          "secondary": "#f9f9f9",
+          "secondary-foreground": "#333333",
+          "muted": "#f9f9f9",
+          "muted-foreground": "#959595",
+          "accent": "#eeeeee",
+          "accent-foreground": "#333333",
+          "destructive": "#cd2d2b",
+          "border": "#dddddd",
+          "input": "#dddddd",
+          "ring": "#0085e5",
+          "chart-1": "#0085e5",
+          "chart-2": "#ff8a00",
+          "chart-3": "#ef5552",
+          "chart-4": "#65bfff",
+          "chart-5": "#ffb966",
+          "sidebar": "#ffffff",
+          "sidebar-foreground": "#0f0f0f",
+          "sidebar-primary": "#0f0f0f",
+          "sidebar-primary-foreground": "#ffffff",
+          "sidebar-accent": "#f9f9f9",
+          "sidebar-accent-foreground": "#333333",
+          "sidebar-border": "#dddddd",
+          "sidebar-ring": "#0085e5",
+          "radius": "0.5rem"
+        },
+        "dark": {
+          "background": "#262626",
+          "foreground": "#f9f9f9",
+          "card": "#262626",
+          "card-foreground": "#f9f9f9",
+          "popover": "#262626",
+          "popover-foreground": "#f9f9f9",
+          "primary": "#f9f9f9",
+          "primary-foreground": "#0f0f0f",
+          "secondary": "#2c2c2c",
+          "secondary-foreground": "#eeeeee",
+          "muted": "#2c2c2c",
+          "muted-foreground": "#aaaaaa",
+          "accent": "#262626",
+          "accent-foreground": "#eeeeee",
+          "destructive": "#cd2d2b",
+          "border": "#333333",
+          "input": "#333333",
+          "ring": "#0085e5",
+          "chart-1": "#0085e5",
+          "chart-2": "#ff8a00",
+          "chart-3": "#ef5552",
+          "chart-4": "#65bfff",
+          "chart-5": "#ffb966",
+          "sidebar": "#262626",
+          "sidebar-foreground": "#f9f9f9",
+          "sidebar-primary": "#f9f9f9",
+          "sidebar-primary-foreground": "#0f0f0f",
+          "sidebar-accent": "#2c2c2c",
+          "sidebar-accent-foreground": "#eeeeee",
+          "sidebar-border": "#333333",
+          "sidebar-ring": "#0085e5",
+          "radius": "0.5rem"
+        }
+      },
+      "dependencies": ["radix-ui"],
+      "files": [
+        {
+          "path": "src/index.css",
+          "type": "registry:style",
+          "target": "src/index.css"
+        },
+        {
+          "path": "src/lib/utils.ts",
+          "type": "registry:lib",
+          "target": "src/lib/utils.ts"
+        }
+      ]
+    },
+    {
+      "name": "button",
+      "type": "registry:ui",
+      "title": "Button",
+      "description": "Figma 스펙 기반 버튼 — 6 variant, 11 size",
+      "dependencies": ["class-variance-authority", "radix-ui"],
+      "registryDependencies": ["theme"],
+      "files": [
+        {
+          "path": "src/components/ui/button.tsx",
+          "type": "registry:ui",
+          "target": "src/components/ui/button.tsx"
+        },
+        {
+          "path": "src/components/ui/variants/button.ts",
+          "type": "registry:ui",
+          "target": "src/components/ui/variants/button.ts"
+        }
+      ]
+    },
+    {
+      "name": "input",
+      "type": "registry:ui",
+      "title": "Input",
+      "dependencies": [],
+      "registryDependencies": ["theme"],
+      "files": [
+        {
+          "path": "src/components/ui/input.tsx",
+          "type": "registry:ui",
+          "target": "src/components/ui/input.tsx"
+        }
+      ]
+    },
+    {
+      "name": "badge",
+      "type": "registry:ui",
+      "title": "Badge",
+      "description": "Figma 기반 Badge — chip/badge/dot 타입, status 색상",
+      "dependencies": ["class-variance-authority"],
+      "registryDependencies": ["theme"],
+      "files": [
+        {
+          "path": "src/components/ui/badge.tsx",
+          "type": "registry:ui",
+          "target": "src/components/ui/badge.tsx"
+        },
+        {
+          "path": "src/components/ui/variants/badge.ts",
+          "type": "registry:ui",
+          "target": "src/components/ui/variants/badge.ts"
+        }
+      ]
+    },
+    {
+      "name": "card",
+      "type": "registry:ui",
+      "title": "Card",
+      "registryDependencies": ["theme"],
+      "files": [
+        {
+          "path": "src/components/ui/card.tsx",
+          "type": "registry:ui",
+          "target": "src/components/ui/card.tsx"
+        }
+      ]
+    },
+    {
+      "name": "dialog",
+      "type": "registry:ui",
+      "title": "Dialog",
+      "dependencies": ["radix-ui"],
+      "registryDependencies": ["theme"],
+      "files": [
+        {
+          "path": "src/components/ui/dialog.tsx",
+          "type": "registry:ui",
+          "target": "src/components/ui/dialog.tsx"
+        }
+      ]
+    },
+    {
+      "name": "select",
+      "type": "registry:ui",
+      "title": "Select",
+      "dependencies": ["radix-ui"],
+      "registryDependencies": ["theme"],
+      "files": [
+        {
+          "path": "src/components/ui/select.tsx",
+          "type": "registry:ui",
+          "target": "src/components/ui/select.tsx"
+        }
+      ]
+    },
+    {
+      "name": "table",
+      "type": "registry:ui",
+      "title": "Table",
+      "registryDependencies": ["theme"],
+      "files": [
+        {
+          "path": "src/components/ui/table.tsx",
+          "type": "registry:ui",
+          "target": "src/components/ui/table.tsx"
+        }
+      ]
+    },
+    {
+      "name": "tabs",
+      "type": "registry:ui",
+      "title": "Tabs",
+      "description": "default/line/segment 3가지 variant",
+      "dependencies": ["radix-ui", "class-variance-authority"],
+      "registryDependencies": ["theme"],
+      "files": [
+        {
+          "path": "src/components/ui/tabs.tsx",
+          "type": "registry:ui",
+          "target": "src/components/ui/tabs.tsx"
+        },
+        {
+          "path": "src/components/ui/variants/tabs.ts",
+          "type": "registry:ui",
+          "target": "src/components/ui/variants/tabs.ts"
+        }
+      ]
+    },
+    {
+      "name": "checkbox",
+      "type": "registry:ui",
+      "title": "Checkbox",
+      "dependencies": ["radix-ui"],
+      "registryDependencies": ["theme"],
+      "files": [
+        {
+          "path": "src/components/ui/checkbox.tsx",
+          "type": "registry:ui",
+          "target": "src/components/ui/checkbox.tsx"
+        }
+      ]
+    },
+    {
+      "name": "switch",
+      "type": "registry:ui",
+      "title": "Switch",
+      "dependencies": ["radix-ui"],
+      "registryDependencies": ["theme"],
+      "files": [
+        {
+          "path": "src/components/ui/switch.tsx",
+          "type": "registry:ui",
+          "target": "src/components/ui/switch.tsx"
+        }
+      ]
+    },
+    {
+      "name": "radio-group",
+      "type": "registry:ui",
+      "title": "Radio Group",
+      "dependencies": ["radix-ui"],
+      "registryDependencies": ["theme"],
+      "files": [
+        {
+          "path": "src/components/ui/radio-group.tsx",
+          "type": "registry:ui",
+          "target": "src/components/ui/radio-group.tsx"
+        }
+      ]
+    },
+    {
+      "name": "textarea",
+      "type": "registry:ui",
+      "title": "Textarea",
+      "registryDependencies": ["theme"],
+      "files": [
+        {
+          "path": "src/components/ui/textarea.tsx",
+          "type": "registry:ui",
+          "target": "src/components/ui/textarea.tsx"
+        }
+      ]
+    },
+    {
+      "name": "label",
+      "type": "registry:ui",
+      "title": "Label",
+      "dependencies": ["radix-ui"],
+      "registryDependencies": ["theme"],
+      "files": [
+        {
+          "path": "src/components/ui/label.tsx",
+          "type": "registry:ui",
+          "target": "src/components/ui/label.tsx"
+        }
+      ]
+    },
+    {
+      "name": "form",
+      "type": "registry:ui",
+      "title": "Form",
+      "dependencies": ["radix-ui", "react-hook-form", "@hookform/resolvers"],
+      "registryDependencies": ["theme", "label"],
+      "files": [
+        {
+          "path": "src/components/ui/form.tsx",
+          "type": "registry:ui",
+          "target": "src/components/ui/form.tsx"
+        }
+      ]
+    },
+    {
+      "name": "sheet",
+      "type": "registry:ui",
+      "title": "Sheet",
+      "dependencies": ["radix-ui"],
+      "registryDependencies": ["theme"],
+      "files": [
+        {
+          "path": "src/components/ui/sheet.tsx",
+          "type": "registry:ui",
+          "target": "src/components/ui/sheet.tsx"
+        }
+      ]
+    },
+    {
+      "name": "popover",
+      "type": "registry:ui",
+      "title": "Popover",
+      "dependencies": ["radix-ui"],
+      "registryDependencies": ["theme"],
+      "files": [
+        {
+          "path": "src/components/ui/popover.tsx",
+          "type": "registry:ui",
+          "target": "src/components/ui/popover.tsx"
+        }
+      ]
+    },
+    {
+      "name": "command",
+      "type": "registry:ui",
+      "title": "Command",
+      "dependencies": ["cmdk"],
+      "registryDependencies": ["theme", "dialog"],
+      "files": [
+        {
+          "path": "src/components/ui/command.tsx",
+          "type": "registry:ui",
+          "target": "src/components/ui/command.tsx"
+        }
+      ]
+    },
+    {
+      "name": "calendar",
+      "type": "registry:ui",
+      "title": "Calendar",
+      "dependencies": ["react-day-picker", "date-fns"],
+      "registryDependencies": ["theme", "button"],
+      "files": [
+        {
+          "path": "src/components/ui/calendar.tsx",
+          "type": "registry:ui",
+          "target": "src/components/ui/calendar.tsx"
+        }
+      ]
+    },
+    {
+      "name": "separator",
+      "type": "registry:ui",
+      "title": "Separator",
+      "dependencies": ["radix-ui"],
+      "registryDependencies": ["theme"],
+      "files": [
+        {
+          "path": "src/components/ui/separator.tsx",
+          "type": "registry:ui",
+          "target": "src/components/ui/separator.tsx"
+        }
+      ]
+    },
+    {
+      "name": "skeleton",
+      "type": "registry:ui",
+      "title": "Skeleton",
+      "registryDependencies": ["theme"],
+      "files": [
+        {
+          "path": "src/components/ui/skeleton.tsx",
+          "type": "registry:ui",
+          "target": "src/components/ui/skeleton.tsx"
+        }
+      ]
+    },
+    {
+      "name": "sonner",
+      "type": "registry:ui",
+      "title": "Sonner",
+      "dependencies": ["sonner"],
+      "registryDependencies": ["theme"],
+      "files": [
+        {
+          "path": "src/components/ui/sonner.tsx",
+          "type": "registry:ui",
+          "target": "src/components/ui/sonner.tsx"
+        }
+      ]
+    },
+    {
+      "name": "alert-dialog",
+      "type": "registry:ui",
+      "title": "Alert Dialog",
+      "dependencies": ["radix-ui"],
+      "registryDependencies": ["theme", "button"],
+      "files": [
+        {
+          "path": "src/components/ui/alert-dialog.tsx",
+          "type": "registry:ui",
+          "target": "src/components/ui/alert-dialog.tsx"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,335 @@
+@import 'tailwindcss';
+@import 'tw-animate-css';
+@import 'shadcn/tailwind.css';
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme inline {
+  /* 폰트 패밀리 */
+  --font-sans:
+    'Pretendard Variable', 'Pretendard', -apple-system, BlinkMacSystemFont,
+    sans-serif;
+
+  /* 브레이크포인트 (DS-1) */
+  --breakpoint-sm: 360px;
+  --breakpoint-md: 960px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-xl: 1366px;
+  --breakpoint-2xl: 1920px;
+
+  /* Primitive 컬러 — Tailwind 유틸리티 클래스 생성용 (bg-*, text-*, border-*)
+     * @theme inline 안에서는 var() 금지 — 직접값만 허용 */
+  --color-white: #ffffff;
+  --color-black: #000000;
+
+  --color-neutral-50: #f9f9f9;
+  --color-neutral-100: #f6f6f6;
+  --color-neutral-150: #f3f3f3;
+  --color-neutral-200: #eeeeee;
+  --color-neutral-250: #eaeaea;
+  --color-neutral-300: #dddddd;
+  --color-neutral-400: #c2c2c2;
+  --color-neutral-500: #aaaaaa;
+  --color-neutral-550: #959595;
+  --color-neutral-600: #7c7c7c;
+  --color-neutral-700: #666666;
+  --color-neutral-750: #585858;
+  --color-neutral-775: #404040;
+  --color-neutral-800: #333333;
+  --color-neutral-850: #2c2c2c;
+  --color-neutral-900: #262626;
+  --color-neutral-950: #0f0f0f;
+
+  --color-pink-50: #fcdfde;
+  --color-pink-100: #f59a98;
+  --color-pink-200: #ef5552;
+  --color-pink-400: #c81613;
+
+  --color-orange-50: #ffdcb3;
+  --color-orange-100: #ffb966;
+  --color-orange-200: #ff8a00;
+  --color-orange-300: #cc6e00;
+  --color-orange-400: #995300;
+
+  --color-blue-50: #cbe9ff;
+  --color-blue-100: #65bfff;
+  --color-blue-200: #0085e5;
+  --color-blue-400: #004a7f;
+
+  --color-key-pink: #ef5552;
+  --color-key-orange: #ff8a00;
+  --color-key-blue: #0085e5;
+
+  --color-status-positive: #56bc52;
+  --color-status-cautionary: #ff8a00;
+  --color-status-destructive: #cd2d2b;
+  --color-status-info: #1472ff;
+
+  /* shadcn 컴포넌트 내부에서 bg-primary, text-foreground 등 Tailwind 클래스로 참조
+   * @theme inline에 없으면 클래스 자체가 생성 안 되어 shadcn 컴포넌트 스타일 깨짐 */
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+}
+
+:root {
+  /* 콘텐츠 사이즈 (DS-1) */
+  --content-max-width: 1280px;
+  --content-tablet-width: 900px;
+  --content-mobile-padding: 1rem;
+
+  /* ── DS-3 Semantic ── */
+
+  /* Background */
+  --color-bg-normal: var(--color-white);
+  --color-bg-alternative: var(--color-neutral-50);
+
+  /* Text */
+  --color-text-strong: var(--color-neutral-950);
+  --color-text-normal: var(--color-neutral-800);
+  --color-text-neutral: var(--color-neutral-600);
+  --color-text-assistive: var(--color-neutral-550);
+  --color-text-disable: var(--color-neutral-400);
+  --color-text-white: var(--color-white);
+
+  /* Button */
+  --color-btn-white: var(--color-white);
+  --color-btn-black: var(--color-black);
+  --color-btn-disable: var(--color-neutral-250);
+  --color-btn-disable-line: var(--color-neutral-300);
+
+  /* Icon */
+  --color-icon-strong: var(--color-neutral-950);
+  --color-icon-normal: var(--color-neutral-800);
+  --color-icon-assistive: var(--color-neutral-500);
+  --color-icon-disable: var(--color-neutral-400);
+  --color-icon-white: var(--color-white);
+
+  /* Line */
+  --color-line-normal: var(--color-neutral-100);
+  --color-line-stroke: var(--color-neutral-300);
+
+  /* Status — @theme inline의 Primitive와 이름이 같아서 직접값 사용 */
+  --color-status-positive: #56bc52;
+  --color-status-cautionary: #ff8a00;
+  --color-status-destructive: #cd2d2b;
+  --color-status-info: #1472ff;
+
+  /* Material */
+  --color-material-dimmer: rgba(0, 0, 0, 0.7);
+
+  /* Shadow */
+  --shadow-normal: 4px 4px 10px 0px rgba(0, 0, 0, 0.2);
+  --shadow-soft: 0px 1px 2px 0px rgba(0, 0, 0, 0.15);
+
+  /* ── shadcn/ui → 우리 토큰 연결 ── */
+  --radius: 0.5rem;
+
+  /* radius 파생 — @theme inline 의 var(--radius) 참조 문제로 :root에서 정의 */
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+  --radius-3xl: calc(var(--radius) + 12px);
+  --radius-4xl: calc(var(--radius) + 16px);
+
+  /* wide-impact: 여러 컴포넌트에 걸쳐 사용 */
+  --background: var(--color-bg-normal);
+  --foreground: var(--color-text-strong);
+  --border: var(--color-line-stroke);
+  --input: var(--color-line-stroke);
+  --ring: var(--color-key-blue);
+  --destructive: var(--color-status-destructive);
+  --primary: var(--color-btn-black);
+  --primary-foreground: var(--color-text-white);
+  --muted: var(--color-bg-alternative);
+  --muted-foreground: var(--color-text-assistive);
+  --accent: var(--color-neutral-200);
+  --accent-foreground: var(--color-text-normal);
+
+  /* shadcn 전용 */
+  --card: var(--color-bg-normal);
+  --card-foreground: var(--color-text-strong);
+  --popover: var(--color-bg-normal);
+  --popover-foreground: var(--color-text-strong);
+  --secondary: var(--color-bg-alternative);
+  --secondary-foreground: var(--color-text-normal);
+  --chart-1: var(--color-key-blue);
+  --chart-2: var(--color-key-orange);
+  --chart-3: var(--color-key-pink);
+  --chart-4: var(--color-blue-100);
+  --chart-5: var(--color-orange-100);
+  --sidebar: var(--color-bg-normal);
+  --sidebar-foreground: var(--color-text-strong);
+  --sidebar-primary: var(--color-text-strong);
+  --sidebar-primary-foreground: var(--color-text-white);
+  --sidebar-accent: var(--color-bg-alternative);
+  --sidebar-accent-foreground: var(--color-text-normal);
+  --sidebar-border: var(--color-line-stroke);
+  --sidebar-ring: var(--color-key-blue);
+}
+
+/* ── Dark Mode ── */
+.dark {
+  /* Background */
+  --color-bg-normal: var(--color-neutral-900);
+  --color-bg-alternative: var(--color-neutral-850);
+
+  /* Text */
+  --color-text-strong: var(--color-neutral-50);
+  --color-text-normal: var(--color-neutral-200);
+  --color-text-neutral: var(--color-neutral-400);
+  --color-text-assistive: var(--color-neutral-500);
+  --color-text-disable: var(--color-neutral-600);
+  --color-text-white: var(--color-white);
+
+  /* Button */
+  --color-btn-white: var(--color-neutral-950);
+  --color-btn-black: var(--color-neutral-50);
+  --color-btn-disable: var(--color-neutral-775);
+  --color-btn-disable-line: var(--color-neutral-700);
+
+  /* Icon */
+  --color-icon-strong: var(--color-neutral-50);
+  --color-icon-normal: var(--color-neutral-200);
+  --color-icon-assistive: var(--color-neutral-500);
+  --color-icon-disable: var(--color-neutral-600);
+  --color-icon-white: var(--color-white);
+
+  /* Line — 배경(#0f0f0f) 대비 은은하게 */
+  --color-line-normal: var(--color-neutral-800);
+  --color-line-stroke: var(--color-neutral-800);
+
+  /* Material */
+  --color-material-dimmer: rgba(0, 0, 0, 0.8);
+
+  /* Shadow */
+  --shadow-normal: 4px 4px 10px 0px rgba(0, 0, 0, 0.5);
+  --shadow-soft: 0px 1px 2px 0px rgba(0, 0, 0, 0.3);
+
+  /* shadcn/ui 연결 */
+  --background: var(--color-bg-normal);
+  --foreground: var(--color-text-strong);
+  --border: var(--color-neutral-800);
+  --input: var(--color-neutral-800);
+  --primary: var(--color-btn-black);
+  --primary-foreground: var(--color-neutral-950);
+  --muted: var(--color-bg-alternative);
+  --muted-foreground: var(--color-text-assistive);
+  --accent: var(--color-neutral-900);
+  --accent-foreground: var(--color-text-normal);
+  --card: var(--color-neutral-900);
+  --card-foreground: var(--color-text-strong);
+  --popover: var(--color-neutral-900);
+  --popover-foreground: var(--color-text-strong);
+  --secondary: var(--color-bg-alternative);
+  --secondary-foreground: var(--color-text-normal);
+  --sidebar: var(--color-bg-normal);
+  --sidebar-foreground: var(--color-text-strong);
+  --sidebar-primary: var(--color-text-strong);
+  --sidebar-primary-foreground: var(--color-neutral-950);
+  --sidebar-accent: var(--color-bg-alternative);
+  --sidebar-accent-foreground: var(--color-text-normal);
+  --sidebar-border: var(--color-neutral-800);
+}
+
+@layer utilities {
+  /* 폰트 웨이트 */
+  .weight-400 {
+    font-weight: 400;
+  }
+  .weight-600 {
+    font-weight: 600;
+  }
+  .weight-700 {
+    font-weight: 700;
+  }
+  .weight-800 {
+    font-weight: 800;
+  }
+
+  /* Figma 타이포그래피 조합 클래스 — font-size + line-height 묶음
+   * prefix를 text- 대신 사용해서 Tailwind의 text-(color|align)과 충돌 방지
+   * 사용: className="typo-body3 font-extrabold text-white" */
+  .typo-headline1 {
+    font-size: 1.5rem;
+    line-height: 2.125rem;
+  } /* 24/34 */
+  .typo-headline2 {
+    font-size: 1.375rem;
+    line-height: 2rem;
+  } /* 22/32 */
+  .typo-headline3 {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  } /* 20/28 */
+  .typo-headline4 {
+    font-size: 1.125rem;
+    line-height: 1.625rem;
+  } /* 18/26 */
+  .typo-body1 {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  } /* 16/24 */
+  .typo-body2 {
+    font-size: 0.9375rem;
+    line-height: 1.5rem;
+  } /* 15/24 */
+  .typo-body3 {
+    font-size: 0.875rem;
+    line-height: 1.5rem;
+  } /* 14/24 */
+  .typo-micro1 {
+    font-size: 0.75rem;
+    line-height: 1.25rem;
+  } /* 12/20 */
+  .typo-micro2 {
+    font-size: 0.625rem;
+    line-height: 1.125rem;
+  } /* 10/18 */
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  html {
+    font-family: var(--font-sans);
+    letter-spacing: -0.01em; /* Figma 한국어 공통 -1% */
+  }
+  body {
+    font-size: 0.875rem;
+    line-height: 1.5rem;
+    background-color: var(--color-bg-normal);
+    color: var(--color-text-strong);
+  }
+}

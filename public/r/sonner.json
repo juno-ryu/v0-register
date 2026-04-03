@@ -1,0 +1,20 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "sonner",
+  "title": "Sonner",
+  "dependencies": [
+    "sonner"
+  ],
+  "registryDependencies": [
+    "theme"
+  ],
+  "files": [
+    {
+      "path": "src/components/ui/sonner.tsx",
+      "content": "import {\n  CheckCircleIcon,\n  InfoIcon,\n  Loader2Icon,\n  OctagonXIcon,\n  TriangleAlertIcon,\n} from \"lucide-react\"\nimport { Toaster as Sonner, type ToasterProps } from \"sonner\"\n\n// Figma 스펙: node-id=1494-77708\n// bg: neutral-800(#333333), text: white, typo-body3/weight-800\n// 아이콘: 24px, action: #4791ff, width: 328px\n\nconst Toaster = ({ ...props }: ToasterProps) => {\n  return (\n    <Sonner\n      className=\"toaster group\"\n      toastOptions={{\n        classNames: {\n          toast: \"!bg-neutral-800 !text-white !border-none !rounded-none !shadow-none !w-[328px] !px-4 !py-2.5 flex items-center gap-2\",\n          title: \"typo-body3 weight-800 !text-white\",\n          description: \"typo-micro1 !text-white/70\",\n          actionButton: \"!bg-transparent !text-[#4791ff] typo-body3 weight-600\",\n          cancelButton: \"!bg-transparent !text-white/60 typo-body3 weight-600\",\n          icon: \"!size-6 shrink-0\",\n        },\n      }}\n      icons={{\n        success: <CheckCircleIcon className=\"size-6 text-status-positive\" />,\n        info: <InfoIcon className=\"size-6 text-[#4791ff]\" />,\n        warning: <TriangleAlertIcon className=\"size-6 text-status-cautionary\" />,\n        error: <OctagonXIcon className=\"size-6 text-status-destructive\" />,\n        loading: <Loader2Icon className=\"size-6 animate-spin text-white\" />,\n      }}\n      {...props}\n    />\n  )\n}\n\nexport { Toaster }\n",
+      "type": "registry:ui",
+      "target": "src/components/ui/sonner.tsx"
+    }
+  ],
+  "type": "registry:ui"
+}

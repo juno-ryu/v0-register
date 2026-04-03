@@ -1,0 +1,20 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "radio-group",
+  "title": "Radio Group",
+  "dependencies": [
+    "radix-ui"
+  ],
+  "registryDependencies": [
+    "theme"
+  ],
+  "files": [
+    {
+      "path": "src/components/ui/radio-group.tsx",
+      "content": "import * as React from \"react\"\nimport { RadioGroup as RadioGroupPrimitive } from \"radix-ui\"\n\nimport { cn } from \"@/lib/utils\"\n\nfunction RadioGroup({\n  className,\n  ...props\n}: React.ComponentProps<typeof RadioGroupPrimitive.Root>) {\n  return (\n    <RadioGroupPrimitive.Root\n      data-slot=\"radio-group\"\n      className={cn(\"grid gap-3\", className)}\n      {...props}\n    />\n  )\n}\n\nfunction RadioGroupItem({\n  className,\n  wrapperClassName,\n  size = \"default\",\n  ...props\n}: React.ComponentProps<typeof RadioGroupPrimitive.Item> & {\n  wrapperClassName?: string\n  size?: \"default\" | \"sm\"\n}) {\n  const isSmall = size === \"sm\"\n\n  return (\n    <div\n      className={cn(\"shrink-0 inline-flex\", wrapperClassName)}\n      style={{ padding: isSmall ? \"1.67px\" : \"2px\" }}\n    >\n      <RadioGroupPrimitive.Item\n        data-slot=\"radio-group-item\"\n        className={cn(\n          \"shrink-0 rounded-full outline-none cursor-pointer transition-all\",\n          \"border-2 border-neutral-600 bg-transparent\",\n          isSmall ? \"size-[16.66667px]\" : \"size-5\",\n          // checked: 파란 링 + 배경색 갭(inset shadow) + 파란 배경\n          \"data-[state=checked]:border-key-blue data-[state=checked]:bg-key-blue\",\n          isSmall\n            ? \"data-[state=checked]:shadow-[inset_0_0_0_3px_var(--background)]\"\n            : \"data-[state=checked]:shadow-[inset_0_0_0_4px_var(--background)]\",\n          // disabled\n          \"disabled:cursor-not-allowed disabled:border-border\",\n          \"disabled:data-[state=checked]:border-key-blue/30 disabled:data-[state=checked]:bg-key-blue/30\",\n          className\n        )}\n        {...props}\n      >\n        <RadioGroupPrimitive.Indicator />\n      </RadioGroupPrimitive.Item>\n    </div>\n  )\n}\n\nexport { RadioGroup, RadioGroupItem }\n",
+      "type": "registry:ui",
+      "target": "src/components/ui/radio-group.tsx"
+    }
+  ],
+  "type": "registry:ui"
+}

@@ -1,0 +1,57 @@
+{
+  "common": {
+    "cancel": "취소",
+    "confirm": "적용",
+    "search": "조회",
+    "reset": "초기화",
+    "save": "저장",
+    "delete": "삭제",
+    "edit": "수정",
+    "create": "등록",
+    "loading": "불러오는 중...",
+    "noData": "조회된 데이터가 없습니다.",
+    "logout": "로그아웃"
+  },
+  "menu": {
+    "dashboard": "대시보드",
+    "orders": "주문내역",
+    "settlements": "정산내역",
+    "disbursement-customers": "고객사정산",
+    "account": "계정정보",
+    "brand-management": "브랜드관리",
+    "branch-management": "매장관리",
+    "menu-management": "상품관리",
+    "statistics": "통계",
+    "benefit-management": "혜택관리",
+    "customer-management": "회원관리",
+    "digital-marketing": "디지털 마케팅"
+  },
+  "sub_menu": {
+    "branchInformation": "매장 정보",
+    "businessHoursManagement": "영업시간 관리",
+    "deliveryZoneManagement": "배달지역 관리",
+    "webOrderSettings": "웹주문 화면 설정 (QR/NFC)",
+    "orderService": "주문 서비스",
+    "operationProfileManagement": "운영모드",
+    "categoryManagement": "상품 카테고리",
+    "menuManagement": "상품",
+    "optionManagement": "상품 옵션",
+    "originManagement": "원산지 표기",
+    "couponManagement": "쿠폰 관리",
+    "issuanceHistory": "발행 내역",
+    "customer": "일반 회원",
+    "membershipCustomer": "고객사 회원",
+    "meal": "급식",
+    "foodAndBeverage": "식음료"
+  },
+  "menu_management": {
+    "select_store": "매장 선택",
+    "select_brand": "브랜드 선택",
+    "brand": "브랜드",
+    "store": "매장",
+    "select_brand_placeholder": "브랜드 선택",
+    "select_store_placeholder": "매장 선택",
+    "no_brands_available": "브랜드가 없습니다.",
+    "no_stores_available": "매장이 없습니다."
+  }
+}
