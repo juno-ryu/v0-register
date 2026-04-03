@@ -26,8 +26,7 @@
     "https://juno-ryu.github.io/v0-register/separator.json",
     "https://juno-ryu.github.io/v0-register/skeleton.json",
     "https://juno-ryu.github.io/v0-register/sonner.json",
-    "https://juno-ryu.github.io/v0-register/alert-dialog.json",
-    "https://juno-ryu.github.io/v0-register/input-group.json"
+    "https://juno-ryu.github.io/v0-register/alert-dialog.json"
   ],
   "files": [],
   "type": "registry:block"

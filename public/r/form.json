@@ -3,7 +3,7 @@
   "name": "form",
   "title": "Form",
   "dependencies": [
-    "@base-ui/react",
+    "radix-ui",
     "react-hook-form",
     "@hookform/resolvers"
   ],

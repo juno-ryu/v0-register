@@ -1,14 +1,14 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry.json",
-  "name": "arabiz-design-system",
-  "homepage": "https://v0-register.vercel.app",
+  "name": "arabiz",
+  "homepage": "https://juno-ryu.github.io/v0-register",
   "items": [
     {
       "name": "theme",
       "type": "registry:theme",
       "title": "ARABIZ Theme",
-      "description": "ARABIZ 백오피스 디자인 시스템 — neutral 14단계, semantic 토큰, Pretendard 폰트",
-      "dependencies": ["@base-ui/react"],
+      "description": "ARABIZ 백오피스 디자인 토큰 — neutral 14단계, semantic 토큰, Pretendard 폰트",
+      "dependencies": ["radix-ui"],
       "files": [
         {
           "path": "src/index.css",
@@ -27,13 +27,18 @@
       "type": "registry:ui",
       "title": "Button",
       "description": "Figma 스펙 기반 버튼 — 6 variant, 11 size",
-      "dependencies": ["class-variance-authority", "@base-ui/react"],
+      "dependencies": ["class-variance-authority", "radix-ui"],
       "registryDependencies": ["https://juno-ryu.github.io/v0-register/theme.json"],
       "files": [
         {
           "path": "src/components/ui/button.tsx",
           "type": "registry:ui",
           "target": "src/components/ui/button.tsx"
+        },
+        {
+          "path": "src/components/ui/variants/button.ts",
+          "type": "registry:ui",
+          "target": "src/components/ui/variants/button.ts"
         }
       ]
     },
@@ -41,7 +46,6 @@
       "name": "input",
       "type": "registry:ui",
       "title": "Input",
-      "dependencies": [],
       "registryDependencies": ["https://juno-ryu.github.io/v0-register/theme.json"],
       "files": [
         {
@@ -55,14 +59,19 @@
       "name": "badge",
       "type": "registry:ui",
       "title": "Badge",
-      "description": "Figma 기반 Badge — chip/badge/dot 타입, status 색상",
-      "dependencies": ["class-variance-authority"],
+      "description": "Figma 기반 Badge — chip/badge/dot, status 색상",
+      "dependencies": ["class-variance-authority", "radix-ui"],
       "registryDependencies": ["https://juno-ryu.github.io/v0-register/theme.json"],
       "files": [
         {
           "path": "src/components/ui/badge.tsx",
           "type": "registry:ui",
           "target": "src/components/ui/badge.tsx"
+        },
+        {
+          "path": "src/components/ui/variants/badge.ts",
+          "type": "registry:ui",
+          "target": "src/components/ui/variants/badge.ts"
         }
       ]
     },
@@ -83,7 +92,7 @@
       "name": "dialog",
       "type": "registry:ui",
       "title": "Dialog",
-      "dependencies": ["@base-ui/react"],
+      "dependencies": ["radix-ui"],
       "registryDependencies": ["https://juno-ryu.github.io/v0-register/theme.json"],
       "files": [
         {
@@ -97,7 +106,7 @@
       "name": "select",
       "type": "registry:ui",
       "title": "Select",
-      "dependencies": ["@base-ui/react"],
+      "dependencies": ["radix-ui"],
       "registryDependencies": ["https://juno-ryu.github.io/v0-register/theme.json"],
       "files": [
         {
@@ -125,13 +134,18 @@
       "type": "registry:ui",
       "title": "Tabs",
       "description": "default/line/segment 3가지 variant",
-      "dependencies": ["@base-ui/react", "class-variance-authority"],
+      "dependencies": ["radix-ui", "class-variance-authority"],
       "registryDependencies": ["https://juno-ryu.github.io/v0-register/theme.json"],
       "files": [
         {
           "path": "src/components/ui/tabs.tsx",
           "type": "registry:ui",
           "target": "src/components/ui/tabs.tsx"
+        },
+        {
+          "path": "src/components/ui/variants/tabs.ts",
+          "type": "registry:ui",
+          "target": "src/components/ui/variants/tabs.ts"
         }
       ]
     },
@@ -139,7 +153,7 @@
       "name": "checkbox",
       "type": "registry:ui",
       "title": "Checkbox",
-      "dependencies": ["@base-ui/react"],
+      "dependencies": ["radix-ui"],
       "registryDependencies": ["https://juno-ryu.github.io/v0-register/theme.json"],
       "files": [
         {
@@ -153,7 +167,7 @@
       "name": "switch",
       "type": "registry:ui",
       "title": "Switch",
-      "dependencies": ["@base-ui/react"],
+      "dependencies": ["radix-ui"],
       "registryDependencies": ["https://juno-ryu.github.io/v0-register/theme.json"],
       "files": [
         {
@@ -167,7 +181,7 @@
       "name": "radio-group",
       "type": "registry:ui",
       "title": "Radio Group",
-      "dependencies": ["@base-ui/react"],
+      "dependencies": ["radix-ui"],
       "registryDependencies": ["https://juno-ryu.github.io/v0-register/theme.json"],
       "files": [
         {
@@ -194,7 +208,7 @@
       "name": "label",
       "type": "registry:ui",
       "title": "Label",
-      "dependencies": ["@base-ui/react"],
+      "dependencies": ["radix-ui"],
       "registryDependencies": ["https://juno-ryu.github.io/v0-register/theme.json"],
       "files": [
         {
@@ -208,7 +222,7 @@
       "name": "form",
       "type": "registry:ui",
       "title": "Form",
-      "dependencies": ["@base-ui/react", "react-hook-form", "@hookform/resolvers"],
+      "dependencies": ["radix-ui", "react-hook-form", "@hookform/resolvers"],
       "registryDependencies": ["https://juno-ryu.github.io/v0-register/theme.json", "https://juno-ryu.github.io/v0-register/label.json"],
       "files": [
         {
@@ -222,7 +236,7 @@
       "name": "sheet",
       "type": "registry:ui",
       "title": "Sheet",
-      "dependencies": ["@base-ui/react"],
+      "dependencies": ["radix-ui"],
       "registryDependencies": ["https://juno-ryu.github.io/v0-register/theme.json"],
       "files": [
         {
@@ -236,7 +250,7 @@
       "name": "popover",
       "type": "registry:ui",
       "title": "Popover",
-      "dependencies": ["@base-ui/react"],
+      "dependencies": ["radix-ui"],
       "registryDependencies": ["https://juno-ryu.github.io/v0-register/theme.json"],
       "files": [
         {
@@ -251,26 +265,12 @@
       "type": "registry:ui",
       "title": "Command",
       "dependencies": ["cmdk"],
-      "registryDependencies": ["https://juno-ryu.github.io/v0-register/theme.json", "https://juno-ryu.github.io/v0-register/dialog.json", "https://juno-ryu.github.io/v0-register/input-group.json"],
+      "registryDependencies": ["https://juno-ryu.github.io/v0-register/theme.json", "https://juno-ryu.github.io/v0-register/dialog.json"],
       "files": [
         {
           "path": "src/components/ui/command.tsx",
           "type": "registry:ui",
           "target": "src/components/ui/command.tsx"
-        }
-      ]
-    },
-    {
-      "name": "input-group",
-      "type": "registry:ui",
-      "title": "Input Group",
-      "dependencies": ["class-variance-authority", "@base-ui/react"],
-      "registryDependencies": ["https://juno-ryu.github.io/v0-register/theme.json", "https://juno-ryu.github.io/v0-register/button.json", "https://juno-ryu.github.io/v0-register/input.json", "https://juno-ryu.github.io/v0-register/textarea.json"],
-      "files": [
-        {
-          "path": "src/components/ui/input-group.tsx",
-          "type": "registry:ui",
-          "target": "src/components/ui/input-group.tsx"
         }
       ]
     },
@@ -292,7 +292,7 @@
       "name": "separator",
       "type": "registry:ui",
       "title": "Separator",
-      "dependencies": ["@base-ui/react"],
+      "dependencies": ["radix-ui"],
       "registryDependencies": ["https://juno-ryu.github.io/v0-register/theme.json"],
       "files": [
         {
@@ -333,7 +333,7 @@
       "name": "alert-dialog",
       "type": "registry:ui",
       "title": "Alert Dialog",
-      "dependencies": ["@base-ui/react"],
+      "dependencies": ["radix-ui"],
       "registryDependencies": ["https://juno-ryu.github.io/v0-register/theme.json", "https://juno-ryu.github.io/v0-register/button.json"],
       "files": [
         {
@@ -371,8 +371,7 @@
         "https://juno-ryu.github.io/v0-register/separator.json",
         "https://juno-ryu.github.io/v0-register/skeleton.json",
         "https://juno-ryu.github.io/v0-register/sonner.json",
-        "https://juno-ryu.github.io/v0-register/alert-dialog.json",
-        "https://juno-ryu.github.io/v0-register/input-group.json"
+        "https://juno-ryu.github.io/v0-register/alert-dialog.json"
       ],
       "files": []
     }
