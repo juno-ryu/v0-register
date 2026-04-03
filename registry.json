@@ -98,7 +98,7 @@
       "title": "Button",
       "description": "Figma 스펙 기반 버튼 — 6 variant, 11 size",
       "dependencies": ["class-variance-authority", "radix-ui"],
-      "registryDependencies": ["theme"],
+      "registryDependencies": ["https://juno-ryu.github.io/v0-register/theme.json"],
       "files": [
         {
           "path": "src/components/ui/button.tsx",
@@ -117,7 +117,7 @@
       "type": "registry:ui",
       "title": "Input",
       "dependencies": [],
-      "registryDependencies": ["theme"],
+      "registryDependencies": ["https://juno-ryu.github.io/v0-register/theme.json"],
       "files": [
         {
           "path": "src/components/ui/input.tsx",
@@ -132,7 +132,7 @@
       "title": "Badge",
       "description": "Figma 기반 Badge — chip/badge/dot 타입, status 색상",
       "dependencies": ["class-variance-authority"],
-      "registryDependencies": ["theme"],
+      "registryDependencies": ["https://juno-ryu.github.io/v0-register/theme.json"],
       "files": [
         {
           "path": "src/components/ui/badge.tsx",
@@ -150,7 +150,7 @@
       "name": "card",
       "type": "registry:ui",
       "title": "Card",
-      "registryDependencies": ["theme"],
+      "registryDependencies": ["https://juno-ryu.github.io/v0-register/theme.json"],
       "files": [
         {
           "path": "src/components/ui/card.tsx",
@@ -164,7 +164,7 @@
       "type": "registry:ui",
       "title": "Dialog",
       "dependencies": ["radix-ui"],
-      "registryDependencies": ["theme"],
+      "registryDependencies": ["https://juno-ryu.github.io/v0-register/theme.json"],
       "files": [
         {
           "path": "src/components/ui/dialog.tsx",
@@ -178,7 +178,7 @@
       "type": "registry:ui",
       "title": "Select",
       "dependencies": ["radix-ui"],
-      "registryDependencies": ["theme"],
+      "registryDependencies": ["https://juno-ryu.github.io/v0-register/theme.json"],
       "files": [
         {
           "path": "src/components/ui/select.tsx",
@@ -191,7 +191,7 @@
       "name": "table",
       "type": "registry:ui",
       "title": "Table",
-      "registryDependencies": ["theme"],
+      "registryDependencies": ["https://juno-ryu.github.io/v0-register/theme.json"],
       "files": [
         {
           "path": "src/components/ui/table.tsx",
@@ -206,7 +206,7 @@
       "title": "Tabs",
       "description": "default/line/segment 3가지 variant",
       "dependencies": ["radix-ui", "class-variance-authority"],
-      "registryDependencies": ["theme"],
+      "registryDependencies": ["https://juno-ryu.github.io/v0-register/theme.json"],
       "files": [
         {
           "path": "src/components/ui/tabs.tsx",
@@ -225,7 +225,7 @@
       "type": "registry:ui",
       "title": "Checkbox",
       "dependencies": ["radix-ui"],
-      "registryDependencies": ["theme"],
+      "registryDependencies": ["https://juno-ryu.github.io/v0-register/theme.json"],
       "files": [
         {
           "path": "src/components/ui/checkbox.tsx",
@@ -239,7 +239,7 @@
       "type": "registry:ui",
       "title": "Switch",
       "dependencies": ["radix-ui"],
-      "registryDependencies": ["theme"],
+      "registryDependencies": ["https://juno-ryu.github.io/v0-register/theme.json"],
       "files": [
         {
           "path": "src/components/ui/switch.tsx",
@@ -253,7 +253,7 @@
       "type": "registry:ui",
       "title": "Radio Group",
       "dependencies": ["radix-ui"],
-      "registryDependencies": ["theme"],
+      "registryDependencies": ["https://juno-ryu.github.io/v0-register/theme.json"],
       "files": [
         {
           "path": "src/components/ui/radio-group.tsx",
@@ -266,7 +266,7 @@
       "name": "textarea",
       "type": "registry:ui",
       "title": "Textarea",
-      "registryDependencies": ["theme"],
+      "registryDependencies": ["https://juno-ryu.github.io/v0-register/theme.json"],
       "files": [
         {
           "path": "src/components/ui/textarea.tsx",
@@ -280,7 +280,7 @@
       "type": "registry:ui",
       "title": "Label",
       "dependencies": ["radix-ui"],
-      "registryDependencies": ["theme"],
+      "registryDependencies": ["https://juno-ryu.github.io/v0-register/theme.json"],
       "files": [
         {
           "path": "src/components/ui/label.tsx",
@@ -294,7 +294,7 @@
       "type": "registry:ui",
       "title": "Form",
       "dependencies": ["radix-ui", "react-hook-form", "@hookform/resolvers"],
-      "registryDependencies": ["theme", "label"],
+      "registryDependencies": ["https://juno-ryu.github.io/v0-register/theme.json", "https://juno-ryu.github.io/v0-register/label.json"],
       "files": [
         {
           "path": "src/components/ui/form.tsx",
@@ -308,7 +308,7 @@
       "type": "registry:ui",
       "title": "Sheet",
       "dependencies": ["radix-ui"],
-      "registryDependencies": ["theme"],
+      "registryDependencies": ["https://juno-ryu.github.io/v0-register/theme.json"],
       "files": [
         {
           "path": "src/components/ui/sheet.tsx",
@@ -322,7 +322,7 @@
       "type": "registry:ui",
       "title": "Popover",
       "dependencies": ["radix-ui"],
-      "registryDependencies": ["theme"],
+      "registryDependencies": ["https://juno-ryu.github.io/v0-register/theme.json"],
       "files": [
         {
           "path": "src/components/ui/popover.tsx",
@@ -336,7 +336,7 @@
       "type": "registry:ui",
       "title": "Command",
       "dependencies": ["cmdk"],
-      "registryDependencies": ["theme", "dialog"],
+      "registryDependencies": ["https://juno-ryu.github.io/v0-register/theme.json", "https://juno-ryu.github.io/v0-register/dialog.json"],
       "files": [
         {
           "path": "src/components/ui/command.tsx",
@@ -350,7 +350,7 @@
       "type": "registry:ui",
       "title": "Calendar",
       "dependencies": ["react-day-picker", "date-fns"],
-      "registryDependencies": ["theme", "button"],
+      "registryDependencies": ["https://juno-ryu.github.io/v0-register/theme.json", "https://juno-ryu.github.io/v0-register/button.json"],
       "files": [
         {
           "path": "src/components/ui/calendar.tsx",
@@ -364,7 +364,7 @@
       "type": "registry:ui",
       "title": "Separator",
       "dependencies": ["radix-ui"],
-      "registryDependencies": ["theme"],
+      "registryDependencies": ["https://juno-ryu.github.io/v0-register/theme.json"],
       "files": [
         {
           "path": "src/components/ui/separator.tsx",
@@ -377,7 +377,7 @@
       "name": "skeleton",
       "type": "registry:ui",
       "title": "Skeleton",
-      "registryDependencies": ["theme"],
+      "registryDependencies": ["https://juno-ryu.github.io/v0-register/theme.json"],
       "files": [
         {
           "path": "src/components/ui/skeleton.tsx",
@@ -391,7 +391,7 @@
       "type": "registry:ui",
       "title": "Sonner",
       "dependencies": ["sonner"],
-      "registryDependencies": ["theme"],
+      "registryDependencies": ["https://juno-ryu.github.io/v0-register/theme.json"],
       "files": [
         {
           "path": "src/components/ui/sonner.tsx",
@@ -405,7 +405,7 @@
       "type": "registry:ui",
       "title": "Alert Dialog",
       "dependencies": ["radix-ui"],
-      "registryDependencies": ["theme", "button"],
+      "registryDependencies": ["https://juno-ryu.github.io/v0-register/theme.json", "https://juno-ryu.github.io/v0-register/button.json"],
       "files": [
         {
           "path": "src/components/ui/alert-dialog.tsx",

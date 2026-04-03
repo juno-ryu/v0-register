@@ -6,8 +6,8 @@
     "radix-ui"
   ],
   "registryDependencies": [
-    "theme",
-    "button"
+    "https://juno-ryu.github.io/v0-register/theme.json",
+    "https://juno-ryu.github.io/v0-register/button.json"
   ],
   "files": [
     {

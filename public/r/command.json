@@ -6,8 +6,8 @@
     "cmdk"
   ],
   "registryDependencies": [
-    "theme",
-    "dialog"
+    "https://juno-ryu.github.io/v0-register/theme.json",
+    "https://juno-ryu.github.io/v0-register/dialog.json"
   ],
   "files": [
     {

@@ -8,7 +8,7 @@
     "class-variance-authority"
   ],
   "registryDependencies": [
-    "theme"
+    "https://juno-ryu.github.io/v0-register/theme.json"
   ],
   "files": [
     {
